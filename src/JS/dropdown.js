@@ -19,7 +19,7 @@ menu.addEventListener("blur",()=>{
     }
 
     setTimeout(()=>{
-        dropdown.style.display="";
+        dropdown.style.display='';
     },2000);
 });
 
