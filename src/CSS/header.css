@@ -1,0 +1,147 @@
+* {
+	box-sizing: border-box;
+	margin:0;
+}
+
+a {
+	text-decoration: none;
+	
+}
+
+button {
+	margin:0;
+	outline: none;
+	background-color: #FFF;
+	border: 1px solid #FFF;
+}
+
+
+
+
+.header{
+	position: relative;
+}
+
+.drop-down {
+	margin:16px;
+	width: 28px;
+	height: 28px;
+	
+}
+
+.menu {
+	list-style-type: none;
+	color: #000;
+}
+
+
+.click-button {
+	display: block;
+	position: relative;
+
+	
+}
+
+
+.click-button:hover .main-menu {
+	display: block;
+	visibility: visible;
+	
+}
+
+
+
+.click-button:active .main-menu {
+	display: block;
+	visibility: visible;
+}
+
+.click-button:focus .main-menu{
+	display: block;
+	visibility: visible;
+}
+
+
+
+
+
+
+.main-menu{
+	display: none;
+	margin-left: 24px;
+	top:40px;
+	left: 60px;	
+	font-weight: 100;
+	font-size: 28px;
+	line-height: 2.1428571429;
+	color:#000;
+	
+
+
+	
+}	
+
+.main-menu li {
+	position: absolute;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	
+	letter-spacing: -0.08em;
+	
+}
+
+
+.sub-menu:nth-child(1) {
+	margin-top: 20px;
+}
+
+.title {
+	position: absolute;
+	top: 14px;
+	left: 148px;
+	/* font-weight: 100; */
+	color: #000;
+}
+
+.login-button {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	margin:16px;
+	width: 28px;
+	height: 28px;
+}
+
+.main-section {
+	position: relative;
+}
+
+
+.product  {
+	position: fixed;
+	top: 120px;
+	left:840px;
+}
+
+.product img {
+	display: block;
+	margin-left: -240px;
+	width: 680px;
+	height: 680px;
+}
+
+.prev{
+	position: fixed;
+	top: 510px;
+	left: 68px;
+	width: 86px;
+	
+}
+
+.next{
+	position: fixed;
+	top: 510px;
+	right: 0;
+	width: 20px;
+	z-index :99999;
+}
