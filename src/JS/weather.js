@@ -76,3 +76,4 @@ function onGeoError() {
 
 // navigator.geolocation.getCurrentPosition(위치 정보 받는데 성공했을 때 실행 할 함수, 실패 했을 때 실행 할 함수)
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+
