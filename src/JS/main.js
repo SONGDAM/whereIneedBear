@@ -3,11 +3,16 @@
 //데이터 로드 
 
 
+import fetch from 'node-fetch';
+
+console.log('node-fetch');
+
+
 function loadImages(){
     return fetch("../../data.json")
-        .then((response) => response.json())
-        .then((json)=>json.items);
+    .then((response) => response.json());
 }
+        
 
 loadImages().then((items)=>{
     console.log(items);
@@ -19,6 +24,6 @@ function displayItems(items){
     container.innerHTML = items.map((item)=> createHTMLString(item)).join("");
 }
 
-// function createHTMLString(item){
-//     return 
-// }
+
+
+

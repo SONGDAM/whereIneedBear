@@ -37,7 +37,7 @@ button {
 }
 
 
-.drop-down-menu {
+/* .drop-down-menu {
 	display: block;
 	position: relative;
 	width: 40px;
@@ -57,12 +57,12 @@ button {
 .drop-down-menu:active .main-menu {
 	display: block;
 	visibility: visible;
-}
-
+} */
+/* 
 .button:focus .main-menu{
 	display: block;
 	visibility: visible;
-}
+} */
 
 
 
