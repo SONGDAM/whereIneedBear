@@ -1,0 +1,113 @@
+/* css는 따로 추가한 내용 없습니다 */
+
+* {
+	box-sizing: border-box;
+	margin:0;
+	font-family:'Lato', sans-serif;
+}
+
+
+a {
+	display: inline-block;
+	width: 60px;
+	text-decoration: none;
+	color:black;
+}
+
+/* .top-menu{
+	display: block;
+	width: 40px;
+
+} */
+
+button {
+	margin:0;
+	outline: none;
+	background-color: #FFF;
+	border: 1px solid #FFF;
+}
+
+
+.header{
+	position: relative;
+}
+
+.drop-down {
+	margin:16px;
+	width: 28px;
+	height: 28px;
+}
+
+.drop-down-menu {
+	position: fixed;
+	width: 100vw;
+	/* z-index: 9999999999; */
+}
+
+.main-menu{
+	display: none;
+	margin-left: 24px;
+	top:40px;
+	left: 60px;	
+	font-weight: 100;
+	font-size: 28px;
+	line-height: 2.1428571429;
+	color:#000;
+	width: 100vw;
+	height: 100%;	
+	/* background-color:rgba( 255, 255, 255, 0.7 ); */
+      }
+	
+	
+
+	
+
+.main-menu li {
+	display: block;
+	color: #000;
+	position: absolute;
+	margin-top: 20px;
+	letter-spacing: -0.08em;
+}
+
+
+.sub-menu:nth-child(1) {
+	margin-top: 20px;
+}
+
+.title {
+	position: fixed;
+	top: 14px;
+	left: 148px;
+	/* font-weight: 100; */
+	color: #000;
+}
+
+.login-button {
+	position: fixed;
+	top: 0;
+	right: 0px;
+	margin:16px;
+	width: 28px;
+	height: 28px;
+}
+
+.main-section {
+	position: relative;
+}
+
+
+.product  {
+	position: absolute;
+	top: 120px;
+	left:840px;
+}
+
+.product img {
+	display: block;
+
+	margin-left: -240px;
+	width: 680px;
+	height: 680px;
+}
+
