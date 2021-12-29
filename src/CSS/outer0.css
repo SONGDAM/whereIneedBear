@@ -1,23 +1,42 @@
-html,body{ margin:0;}
-#container{ width: 640px; margin: 0 auto; padding:200px;}
-.album{height: 400px; width: 100%; overflow: hidden;}
-.images{
-    display: flex; height: 400px; width: 2560px;
+body,
+html {
+    margin: 0;
+}
+#container {
+    width: 640px;
+    margin: 0 auto;
+    padding: 200px;
+}
+.album {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+.images {
+    display: flex;
+    height: 400px;
+    width: 2560px;
     transition-property: transform;
     transition-duration: 1s;
 }
-.image{width: 640px; height: 400px;}
-.image:nth-child(1){background-color: ;}
-.image:nth-child(2){background-color: ;}
-.image:nth-child(3){background-color: ;}
-button{
-    width: 100px; height: 30px; border:none;
-    color: white; background-color: none;
+.image {
+    width: 640px;
+    height: 400px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    color: white;
+    background-color: none;
 }
 /* button:disabled{
     background-color: gray;
 } */
-.prev{
-  float:left;
+.prev {
+    float: left;
 }
-.next{float:right;}
+.next {
+    float: right;
+}
