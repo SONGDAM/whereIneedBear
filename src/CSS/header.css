@@ -59,8 +59,9 @@ a {
 .main-menu.show {
 	display: block;
 	height: 80px;
-	background-color:rgba( 255, 255, 255, 0.6 );
+	background-color:rgba( 255, 255, 255, 0.5 );
 	transition: all 14s ease-in;
+	z-index: 99999;
 }
 
 
