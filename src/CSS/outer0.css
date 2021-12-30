@@ -3,7 +3,7 @@ html {
     margin: 0;
 }
 #container {
-    width: 640px;
+    width: 1200px;
     margin: 0 auto;
     padding: 200px;
 }
@@ -22,6 +22,18 @@ html {
 .image {
     width: 640px;
     height: 400px;
+}
+#image1 {
+  padding-left: 178px;
+  height: 400px;
+}
+#image2 {
+  padding-left: 234px;
+  height: 420px;
+}
+#image3 {
+  padding-left: 198px;
+  height: 400px;
 }
 
 button {
