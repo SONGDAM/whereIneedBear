@@ -1,6 +1,6 @@
 let curPos= 0;
 let position = 0;
-const IMAGE_WIDTH = 640;
+const IMAGE_WIDTH = 1280;
 
 const prevBtn = document.querySelector(".prev")
 const nextBtn = document.querySelector(".next")
