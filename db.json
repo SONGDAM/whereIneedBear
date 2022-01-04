@@ -2,8 +2,94 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "productType": "muffler",
+      "tempGrade": 1,
+      "type": "accessories",
+      "src": ""
+    },
+    {
+      "id": 2,
+      "productType": "quilted",
+      "tempGrade": 1,
+      "type": "outer",
+      "src": ""
+    },
+    {
+      "id": 3,
+      "productType": "padded",
+      "tempGrade": 1,
+      "type": "outer",
+      "src": ""
+    },
+    {
+      "id": 4,
+      "productType": "thickCoat",
+      "tempGrade": 1,
+      "type": "outer",
+      "src": ""
+    },
+    {
+      "id": 5,
+      "productType": "raised",
+      "tempGrade": 1,
+      "type": "top",
+      "src": ""
+    },
+    {
+      "id": 6,
+      "productType": "woolCoat",
+      "tempGrade": 2,
+      "type": "outer",
+      "src": ""
+    },
+    {
+      "id": 7,
+      "productType": "leather",
+      "tempGrade": 2,
+      "type": "outer",
+      "src": ""
+    },
+    {
+      "id": 8,
+      "productType": "raised",
+      "tempGrade": 2,
+      "type": "top",
+      "src": ""
+    },
+    {
+      "id": 9,
+      "productType": "stocking",
+      "tempGrade": 3,
+      "type": "bottom",
+      "src": ""
+    },
+    {
+      "id": 10,
+      "productType": "raisedPants",
+      "tempGrade": 3,
+      "type": "bottom",
+      "src": ""
+    },
+    {
+      "id": 11,
+      "productType": "trenchCoat",
+      "tempGrade": 3,
+      "type": "outer",
+      "src": ""
+    },
+    {
+      "id": 12,
+      "productType": "fieldJocket",
+      "tempGrade": 3,
+      "type": "outer",
+      "src": ""
+    },
+    {
+      "id": 13,
+      "productType": "jumper",
+      "tempGrade": 3,
+      "type": "outer",
+      "src": ""
     }
   ],
   "comments": [

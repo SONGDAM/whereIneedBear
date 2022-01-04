@@ -28,9 +28,9 @@ function onGeoOk (position) {
     tempArray.push(data.daily[0].temp.day);
 
     // 날씨 정보 태그 넣기
-    document.querySelector('.product > h2').innerHTML += 
-        '<br><span id="dayTemp'+(1)+'">'+(date.getMonth()+1)+"월 "
-        +(date.getDate())+"일"+' : '+tempArray[0]+'℃ ('+data.daily[0].weather[0].description+')</span><br>';
+    document.querySelector('.dayTemp').innerHTML = 
+        '<h1>' + (date.getMonth()+1) + "월 "
+        +(date.getDate())+"일"+' : '+ tempArray[0]+'℃ ('+data.daily[0].weather[0].description+')</h1>';
 
 
 

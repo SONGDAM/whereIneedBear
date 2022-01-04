@@ -55,3 +55,8 @@ button {
     float: right;
     transform: translateY(-250%);
 }
+
+.dayTemp {
+	text-align: center;
+    margin: 20px auto;
+}
