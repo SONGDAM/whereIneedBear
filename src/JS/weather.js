@@ -11,8 +11,6 @@ function onGeoOk (position) {
   // Openweather API 날씨 정도 사용을 위한 url 변수 지정 (위도 경도 참조)
   const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&exclude=minutely,hourly&appid=${API_KEY}&units=metric&lang=kr`;
 
-  console.log(lat, lng);
-  console.log(url);
 
   // 일주일간의 온도 정보 가져오기 위한 Openweather API 서버에 요청
   fetch(url).then(response => response.json()).then(data => {
@@ -30,8 +28,9 @@ function onGeoOk (position) {
     // 날씨 정보 태그 넣기
     document.querySelector('.dayTemp').innerHTML = 
         '<h1>' + (date.getMonth()+1) + "월 "
-        +(date.getDate())+"일"+' : '+ tempArray[0]+'℃ ('+data.daily[0].weather[0].description+')</h1>';
+        +(date.getDate())+"일"+' : '+ Math.round(tempArray[0])+'℃ ('+data.daily[0].weather[0].description+')</h1>';
 
+    console.log(tempArray[0]);
 
 
     /* 일주일치 날씨 정보
@@ -76,4 +75,3 @@ function onGeoError() {
 
 // navigator.geolocation.getCurrentPosition(위치 정보 받는데 성공했을 때 실행 할 함수, 실패 했을 때 실행 할 함수)
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
-
