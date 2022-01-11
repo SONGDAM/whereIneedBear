@@ -9,64 +9,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/header.css">
-    <link rel="stylesheet" href="./CSS/slide0.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/outer0.css">
     <script defer src="./JS/dropdown.js"></script>
     <script defer src="./JS/main.js"></script>
     <script defer src="./JS/weather.js"></script>
-    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="./JS/slide0.js"></script>
     <title>whereineedbear</title>
 </head>
 
 <body>
-  <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background-image: url(./assets/testimg.jpg); background-size:cover;">
-        <span style="padding: 20px">Whereineedbear
-          <section class="main-section">
-              <div class="product">
-                  <div id="container">
-                      <div class="dayTemp">
-                          <h1>Loading..</h1>
-                      </div>
+    <!-- header -->
+    <header class="header">
+        <div class="drop-down-menu">
+            <button type="button" class="button">
+                <img src="./assets/menu-bars-svgrepo-com.svg" alt="menu" class="drop-down" aria-label="menu-bar" />
+            </button>
+            <ul class="top-menu">
+                <a href="./index.html" class="main-menu" target=>
+                    Home</a>
+                <a href="" class="main-menu">
+                    TPO
+                </a>
+                <a href="./HTML/my.html" class="main-menu">
+                    MY
+                </a>
+            </ul>
+        </div>
+        <a href="/src/index.html">
+            <h1 class="title">Title</h1>
+        </a>
+        <a href="#"><img src="./assets/login-svgrepo-com.svg" class="login-button"></a>
 
-                  </div>
+
+    </header>
+    <!-- 임의로 작성한 코드입니다 -->
+    <section class="main-section">
+        <div class="product">
+            <div id="container">
+                <div class="dayTemp">
+                    <h1>Loading..</h1>
                 </div>
-          </section>
-        </span>
-      </div>
-      <div class="swiper-slide" style="background-image: url(./assets/testimg2.jpg); background-size:cover;"></div>
-      <div class="swiper-slide" style="background-image: url(./assets/testimg3.jpg); background-size:cover;"></div>
-      <div class="swiper-slide" style="background-image: url(./assets/testimg4.jpg); background-size:cover;"></div>
-      <div class="swiper-slide" style="background-image: url(./assets/testimg5.jpg); background-size:cover;"></div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
+                <div class="album">
+                    <div class="images">
+                        <div class="image"><img src="./assets/pic1.jpg" id="image1"></div>
+                        <div class="image"><img src="./assets/pic3.jpg" id="image3"></div>
+                        <div class="image"><img src="./assets/pic2.jpg" id="image2"></div>
+                    </div>
+                </div>
+
+                <label class="prev"><img src="./assets/left.jpg" width="40"></label>
+                <label class="next"><img src="./assets/right.jpg" width="40"></label>
+            </div>
+            <div>
+    </section>
 
 </body>
+
 
 </html>
