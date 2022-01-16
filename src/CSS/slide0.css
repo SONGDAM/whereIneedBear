@@ -3,7 +3,7 @@
 	box-sizing: border-box;
 	margin: 0;
 }
-/* 
+/*
 body,
 html {
 	position: relative;
@@ -56,7 +56,7 @@ span {
 	font-size: 30px;
 	display: block;
 	background-color: aliceblue;
-	border: 7px double;
+	border: 7px;
 	border-color: white;
 }
 .main-section {
