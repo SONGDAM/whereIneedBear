@@ -70,8 +70,8 @@ function onGeoOk (position) {
       let day = date.getDate();
 
       // 날씨 정보 입력하기
-      let icon = data.daily[0].weather[0].icon.substr(0, 2);
-      let dayTemp = tempArray.push(data.daily[0].temp.day);
+      let icon = data.current.weather[0].icon.substr(0, 2);
+      let dayTemp = Math.floor(data.current.temp);
       let weatherDesc = '<i class="'+ weatherIcon[icon]+'"></i>';
 
       // 날씨 정보 태그 넣기
