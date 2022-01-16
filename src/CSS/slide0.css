@@ -77,3 +77,7 @@ section {
 	align-items: center;
 	scroll-snap-align: start;
 }
+
+.weather-icon-span {
+	display: inline;
+}

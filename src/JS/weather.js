@@ -1,3 +1,16 @@
+// openWeather icon number별 font Awesome 아이콘 클래스명
+let weatherIcon = {
+  '01' : 'fas fa-sun',
+  '02' : 'fas fa-cloud-sun',
+  '03' : 'fas fa-cloud',
+  '04' : 'fas fa-cloud-meatball',
+  '09' : 'fas fa-cloud-sun-rain',
+  '10' : 'fas fa-cloud-showers-heavy',
+  '11' : 'fas fa-poo-storm',
+  '13' : 'far fa-snowflake',
+  '50' : 'fas fa-smog'
+}
+
 // Openweather API 날짜 정보 받을 수 있는 API키
 const API_KEY = "d1f4c51106f97ceb117112414f8e5794";
 
@@ -21,19 +34,22 @@ function onGeoOk (position) {
 
     // 날짜 지정
     date = new Date(data.daily[0].dt*1000);
+    let month = date.getMonth()+1;
+    let day = date.getDate();
 
     // 날씨 정보 입력하기
-    tempArray.push(data.daily[0].temp.day);
+    let icon = data.daily[0].weather[0].icon.substr(0, 2);
+    let dayTemp = tempArray.push(data.daily[0].temp.day);
+    let weatherDesc = '<i class="'+ weatherIcon[icon]+'"></i>';
 
     // 날씨 정보 태그 넣기
     document.querySelector('.dayTemp').innerHTML = 
-        '<h1>' + (date.getMonth()+1) + "월 "
-        +(date.getDate())+"일"+' : '+ Math.round(tempArray[0])+'℃ ('+data.daily[0].weather[0].description+')</h1>';
+        `<h1>${month}월 ${day}일 ${dayTemp}℃ <span class="weather-icon-span">${weatherDesc}</span></h1>`;
 
-    console.log(tempArray[0]);
+    console.log(icon);
+    
 
-
-    /* 일주일치 날씨 정보
+    /*//일주일치 날씨 정보
     // Openweather API를 배열에 담고 div에 넣기 위한 for문
     for (let i = 0; i < data.daily.length; i++) {
       // Openweather API에서 일주일간 온도정보 받아오기
@@ -50,6 +66,7 @@ function onGeoOk (position) {
         
     }
     */
+    
   });
 
 
