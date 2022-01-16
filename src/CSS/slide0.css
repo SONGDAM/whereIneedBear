@@ -55,10 +55,26 @@ span {
 	font-weight: 700;
 	font-size: 30px;
 	display: block;
-	background-color: aliceblue;
+	background-color: rgba( 255, 255, 255, 0.75 );
 	border: 7px;
 	border-color: white;
 }
+
+p:after {
+	display: block;
+	content: '';
+	border-bottom: solid 3px #000;
+	transform:scaleX(0);
+	transition: transform 250ms ease-in-out;
+}
+p:hover:after {
+	transform: scaleX(1);
+}
+
+/* span:hover {
+	transform: scale(1.4);
+} */
+
 .main-section {
 	font-weight: 700;
 	font-size: 16px;
