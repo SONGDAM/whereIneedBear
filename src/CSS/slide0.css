@@ -86,12 +86,17 @@ p:hover:after {
 	height: 100vh;
 }
 
+::-webkit-scrollbar { 
+	display: none; 
+}
+
 section {
 	display: flex;
 	height: 100vh;
 	justify-content: center;
 	align-items: center;
 	scroll-snap-align: start;
+	overflow: scroll;
 }
 
 .weather-icon-span{

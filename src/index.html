@@ -1,85 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./CSS/slide0.css" />
-		<link rel="stylesheet" href="./CSS/swiper-bundle.min.css" />
-		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
-		<script src="https://kit.fontawesome.com/d12c9ea662.js" crossorigin="anonymous"></script>
-		<script defer src="./JS/weather.js"></script>
-		<script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-		<title>whereineedbear</title>
-		<style media="screen">
-			/* .swiper-slide:hover {opacity: 0.7} */
-			.swiper-slide {
-	opacity: 0.7;
-}
 
-.swiper-slide:hover {
-	opacity: 1.0;
-}
-		</style>
-	</head>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./CSS/slide0.css" />
+	<link rel="stylesheet" href="./CSS/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./CSS/my-img.css">
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+		rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/d12c9ea662.js" crossorigin="anonymous"></script>
+	<script defer src="./JS/weather.js"></script>
+	<script defer src="./JS/my-img.js"></script>
+	<script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<title>whereineedbear</title>
+	<style media="screen">
+		/* .swiper-slide:hover {opacity: 0.7} */
+		.swiper-slide {
+			opacity: 0.7;
+		}
 
-	<body>
-		<!-- Swiper -->
+		.swiper-slide:hover {
+			opacity: 1.0;
+		}
+	</style>
+</head>
 
-		<div class="container">
-			<section>
-				<div class="swiper mySwiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide" style="background-image: url(./assets/fw1.jpg); background-size: cover">
-							<span style="padding: 20px">
-								<p>Whereineedbear</p>
+<body>
+	<!-- Swiper -->
 
-								<div class="main-section">
-									<div class="product">
-										<div id="container">
-											<div class="dayTemp">
-												<h1>Loading..</h1>
-											</div>
+	<div class="container">
+		<section>
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style="background-image: url(./assets/fw1.jpg); background-size: cover">
+						<span style="padding: 20px">
+							<p>Whereineedbear</p>
+
+							<div class="main-section">
+								<div class="product">
+									<div id="container">
+										<div class="dayTemp">
+											<h1>Loading..</h1>
 										</div>
 									</div>
 								</div>
-							</span>
-						</div>
-						<div class="swiper-slide" style="background-image: url(./assets/fw2.jpg); background-size: cover"></div>
-						<div class="swiper-slide" style="background-image: url(./assets/fw3.jpg); background-size: cover"></div>
-						<div class="swiper-slide" style="background-image: url(./assets/fw4.jpg); background-size: cover"></div>
-						<div class="swiper-slide" style="background-image: url(./assets/fw5.jpg); background-size: cover"></div>
+							</div>
+						</span>
 					</div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-pagination"></div>
+					<div class="swiper-slide" style="background-image: url(./assets/fw2.jpg); background-size: cover">
+					</div>
+					<div class="swiper-slide" style="background-image: url(./assets/fw3.jpg); background-size: cover">
+					</div>
+					<div class="swiper-slide" style="background-image: url(./assets/fw4.jpg); background-size: cover">
+					</div>
+					<div class="swiper-slide" style="background-image: url(./assets/fw5.jpg); background-size: cover">
+					</div>
 				</div>
-			</section>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
 
-			<section>
-				<!-- 여기에 코드 작성해주세요~
+		<section>
+			<!-- 여기에 코드 작성해주세요~
                     요 위에 section태그에 디스플레이 값이나 포지션값은 클래스값은 변경이나 선언X
                     클래스명 container로 사용 X -->
-			</section>
-		</div>
+			<div class="container2">
+				<div id="contain">
+					<div class="select">
+						<select name="" id="tempSelect" onchange="selects(this)">
+							<option value="" id="nowTemp"></option>
+							<option value="23">23-27°</option>
+							<option value="20">20-22°</option>
+							<option value="17">17-19°</option>
+							<option value="12">12-16°</option>
+							<option value="9">9-11°</option>
+							<option value="5">8-5°</option>
+							<option value="4">4°↓</option>
+						</select>
+					</div>
+					<div class="btnBox">
+						<button class="btn1" value="casual" onclick="btnLook(this)">Casual</button>
+						<button class="btn1" value="modern" onclick="btnLook(this)">Modern</button>
+						<button class="btn1" value="romantic" onclick="btnLook(this)">Romantic</button>
+						<button class="btn1" value="street" onclick="btnLook(this)">Street</button>
+						<button class="btn1" value="amekaji" onclick="btnLook(this)">Amekaji</button>
+					</div>
+				</div>
+				<span class="realtime"></span>
+				<div id="imgBox"></div>
+			</div>
 
-		<!-- Swiper JS -->
-		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-		<!-- Initialize Swiper -->
-		<script>
-			var swiper = new Swiper('.mySwiper', {
-				slidesPerView: 1,
-				spaceBetween: 30,
-				loop: true,
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true,
-				},
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
-			});
-		</script>
-	</body>
+		</section>
+	</div>
+
+	<!-- Swiper JS -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.mySwiper', {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			loop: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+	</script>
+</body>
+
 </html>
