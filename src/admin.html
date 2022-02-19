@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>admin</title>
+		<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="./CSS/admin.css" />
+		<script defer src="./JS/admin.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="title">Admin</div>
+		</header>
+
+		<article class="admin-form">
+			<form action="/admin" method="POST">
+				<div class="form-fill">
+					<label class="letter">파일 이름</label>
+					<input type="text" class="input" />
+				</div>
+				<div class="form-fill">
+					<label class="letter">파일 업로드</label>
+					<input type="file" accept="image/gif, image/jpeg, image/png" />
+				</div>
+				<div class="form-fill">
+					<label class="letter">온도 선택</label>
+					<select id="" class="select">
+						<option value="">-5</option>
+						<option value="">-4</option>
+						<option value="">-3</option>
+						<option value="">-2</option>
+						<option value="">-1</option>
+						<option value="">1</option>
+						<option value="">2</option>
+						<option value="">3</option>
+						<option value="">4</option>
+					</select>
+				</div>
+
+				<div class="form-fill">
+					<label class="letter">룩선택</label>
+					<select id="" class="select">
+						<option value="">Casual</option>
+						<option value="">Modern</option>
+						<option value="">Romantic</option>
+						<option value="">Street</option>
+						<option value="">Amekaji</option>
+					</select>
+				</div>
+
+				<div class="btn-group">
+					<button type="submit">accept</button>
+					<button type="button">cancel</button>
+				</div>
+				<div></div>
+			</form>
+		</article>
+	</body>
+</html>

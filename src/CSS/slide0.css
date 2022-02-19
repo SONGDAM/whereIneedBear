@@ -2,7 +2,10 @@
 	font-family: 'Libre Baskerville', serif;
 	box-sizing: border-box;
 	margin: 0;
+
 }
+body,
+
 /*
 body,
 html {
@@ -55,7 +58,7 @@ span {
 	font-weight: 700;
 	font-size: 30px;
 	display: block;
-	background-color: rgba( 255, 255, 255, 0.75 );
+	background-color: rgba(255, 255, 255, 0.75);
 	border: 7px;
 	border-color: white;
 }
@@ -64,7 +67,7 @@ p:after {
 	display: block;
 	content: '';
 	border-bottom: solid 3px #000;
-	transform:scaleX(0);
+	transform: scaleX(0);
 	transition: transform 250ms ease-in-out;
 }
 p:hover:after {
@@ -86,8 +89,8 @@ p:hover:after {
 	height: 100vh;
 }
 
-::-webkit-scrollbar { 
-	display: none; 
+::-webkit-scrollbar {
+	display: none;
 }
 
 section {
@@ -99,7 +102,7 @@ section {
 	overflow: scroll;
 }
 
-.weather-icon-span{
+.weather-icon-span {
 	display: inline;
 	border: 0;
 }
