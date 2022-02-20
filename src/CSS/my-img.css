@@ -2,65 +2,91 @@
 	font-family: 'Libre Baskerville', serif;
 	box-sizing: border-box;
 	margin:0;
-}
-
-.container2{
-background-color: #fff;
-width: 100vw;
-height: 100vh;
-}
-
-
-#tempSelect {
-/* border: solid 1px red; */
-margin: 50px auto 10px ;
-display: block;
-font-size: 55px;
-
-border: none;
-text-align: center;
-}
-
-.btn1 {
-background-color: #fff;
-cursor: pointer;
-border: 1px solid gray;
-border-radius: 25px;
-margin: 15px 10px;
-padding: 5px 15px;
-}
-
-.btnBox{
-  text-align: center;
-}
-
-.contain {
-/* border: solid 2px green; */
-width: 100vw;
-margin: auto;
-text-align: center;
-}
-
-#imgBox {
-/* border: solid 2px orange; */
-/* background-color: pink; */
-display: inline-block;
-padding: 0px;
-height: auto;
-object-fit: cover;
-width: 100%;
-margin: auto;
-text-align: center;
-}
-
-#imgBox > img {
-/* border: solid 3px blueviolet; */
-width: 300px;
-height: 400px;
-object-fit: cover;
-margin: 15px;
-display: inline-block;
-}
-
-
-
+	
+ }
+ 
+ .container2{
+ width: 100vw;
+ height: 100vh;
+ background-color: #fff;
+ }
+ 
+ 
+ #tempSelect {
+ /* border: solid 1px red; */
+ margin: 50px auto 10px ;
+ display: block;
+ font-size: 55px;
+ 
+ border: none;
+ text-align: center;
+ }
+ 
+ .btn1 {
+ background-color: #fff;
+ cursor: pointer;
+ border: 1px solid gray;
+ border-radius: 25px;
+ margin: 15px 10px;
+ padding: 5px 15px;
+ }
+ 
+ .btnBox{
+   text-align: center;
+ }
+ 
+ .contain {
+ /* border: solid 2px green; */
+ width: 100vw;
+ margin: auto;
+ text-align: center;
+ }
+ 
+ /* #imgBox {
+ border: solid 2px orange;
+ background-color: pink;
+ display: inline-block;
+ padding: 0px;
+ height: auto;
+ object-fit: cover;
+ width: 100%;
+ margin: auto;
+ text-align: center;
+ background-color: #fff;
+ } */
+ 
+ #imgBox{
+	/* border: solid 1px orange;
+	background-color: lightsalmon; */
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+	background-color: #fff;
+ 
+	
+ }
+ 
+ #imgItem{
+	
+	/* border: solid 1px green; */
+	 width: 71vw;
+	 margin: 0 18px 36px;
+	
+	
+	
+ }
+ 
+ 
+ #imgBox > #imgItem >img {
+	
+ 
+ width: 300px;
+ height: 400px;
+ object-fit: cover;
+ /* margin: 15px;
+ display: inline-block; */
+ }
+ 
+  

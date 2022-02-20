@@ -1,19 +1,19 @@
 const items = [
 	{
 		name: '4_1_c',
-		temperature: '-4',
+		temperature: '4',
 		look: 'casual',
 		image: './assets/attire/4_1_c.jpg',
 	},
 	{
 		name: '4_2_c',
-		temperature: '-4',
+		temperature: '4',
 		look: 'casual',
 		image: './assets/attire/4_2_c.jpg',
 	},
 	{
 		name: '4_3_m',
-		temperature: '-4',
+		temperature: '4',
 		look: 'modern',
 		image: './assets/attire/4_3_m.jpg',
 	},
@@ -109,19 +109,19 @@ const items = [
 	},
 	{
 		name: '5_2_m',
-		temperature: '11',
+		temperature: '5',
 		look: 'modern',
 		image: './assets/attire/5_2_m.jpg',
 	},
 	{
 		name: '5_3_m',
-		temperature: '11',
+		temperature: '5',
 		look: 'modern',
 		image: './assets/attire/5_3_m.jpg',
 	},
 	{
 		name: '5_4_c',
-		temperature: '11',
+		temperature: '5',
 		look: 'casual',
 		image: './assets/attire/5_4_c.jpg',
 	},
@@ -289,7 +289,7 @@ const items = [
 	},
 	{
 		name: '9_16_a',
-		temperature: '-1',
+		temperature: '9',
 		look: 'amekaji',
 		image: './assets/attire/9_16_a.jpg',
 	},
@@ -451,13 +451,13 @@ const items = [
 	},
 	{
 		name: '20_8_r',
-		temperature: '-4',
+		temperature: '20',
 		look: 'romantic',
 		image: './assets/attire/20_8_r.jpg',
 	},
 	{
 		name: '20_9_s',
-		temperature: '-3',
+		temperature: '20',
 		look: 'street',
 		image: './assets/attire/20_9_s.jpg',
 	},
@@ -475,60 +475,89 @@ const items = [
 	},
 	{
 		name: '23_3_r',
-		temperature: '1',
+		temperature: '23',
 		look: 'romatic',
 		image: './assets/attire/23_3_r.jpg',
 	},
 	{
 		name: '23_4_r',
-		temperature: '2',
+		temperature: '23',
 		look: 'romatic',
 		image: './assets/attire/23_4_r.jpg',
 	},
 ];
 
-//템플릿 (imgBox안에 이미지 띄우기)
+
+//템플릿 (imgItem안에 이미지 띄우기)
 function itemTemplate(item) {
 	return `
-  <img src="${item.image}">
-  `;
+   <img src="${item.image}" id="imgItem">
+   `;
 }
 
 //api에서 기온값 가져오기
-const Temp = localStorage.getItem('temp');
-console.log(Temp);
+let Temp = localStorage.getItem('temp');
+console.log("실시간 온도는 : " + Temp);
 
 //select에 실시간 기온값 넣은 option추가
-document.getElementById('nowTemp').innerHTML = `
-<option value="">${Temp}</option>
-`;
+document.getElementById('tempSelect').innerHTML += `
+ <option  id="nowTemp" value="${Temp}"  selected>Now: ${Temp}°</option>
+ `;
 
-//select에서 실시간 기온 가져오기
-let tempOptions = document.getElementById('nowTemp');
-console.log(tempOptions.text);
 
-//실시간 온도와 json온도가 같은것만 필터링
-const filtered = items.filter((i) => i.temperature == nowTemp.text);
+let nowTemp = document.getElementById("tempSelect").options[7].value;
+console.log("실시간 value:" + nowTemp);
 
-if (tempOptions.text < 30 || tempOptions.text > 30) {
-	document.getElementById('imgBox').innerHTML = `
-    ${filtered.map(itemTemplate).join('')}
-    `;
-	console.log(filtered);
+if (Temp <= 4) {
+	nowTemp = 4;
+} else if (Temp >= 4) {
+	nowTemp = 5;
+} else if (Temp >= 11) {
+	nowTemp = 9;
+} else if (Temp >= 16) {
+	nowTemp = 12;
+} else if (Temp >= 19) {
+	nowTemp = 17;
+} else if (Temp >= 22) {
+	nowTemp = 20;
+} else if (Temp >= 27) {
+	nowTemp = 23;
 }
+console.log("바뀐 value:" + nowTemp);
+
+
+filtered = items.filter((i) => i.temperature == nowTemp);
+document.getElementById('imgItem').innerHTML = `
+	${filtered.map(itemTemplate).join('')}
+	`;
+
+
+var tempSelect = document.getElementById('tempSelect')
+
+
+document.getElementById('tempSelect').addEventListener('click', function () {
+	if (tempSelect.children[i].value === 'nowTemp') {
+		filtered = items.filter((i) => i.temperature == nowTemp);
+		document.getElementById('imgItem').innerHTML = `
+		${filtered.map(itemTemplate).join('')}
+		`;
+	}
+})
+
 
 //셀렉트(기온)별 이미지 띄우기
 function selects(s) {
-	filtered_items = items.filter((i) => i.temperature == s.value);
-	document.getElementById('imgBox').innerHTML = `
-    ${filtered_items.map(itemTemplate).join('')}
-    `;
+
+	filtered_temp = items.filter((i) => i.temperature == s.value);
+	document.getElementById('imgItem').innerHTML = `
+	 ${filtered_temp.map(itemTemplate).join('')}
+	 `;
 }
 
 //버튼별(룩)별 이미지 띄우기
 function btnLook(s) {
-	filter_look = filtered_items.filter((i) => i.look == s.value);
-	document.getElementById('imgBox').innerHTML = `
-    ${filter_look.map(itemTemplate).join('')}
-    `;
+	filter_look = filtered_temp.filter((i) => i.look == s.value);
+	document.getElementById('imgItem').innerHTML = `
+	 ${filter_look.map(itemTemplate).join('')}
+	 `;
 }
