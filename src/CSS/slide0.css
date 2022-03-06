@@ -106,3 +106,19 @@ section {
 	display: inline;
 	border: 0;
 }
+
+@media screen and  (min-width:768px) and (max-width: 1023px) {
+	.swiper-slide {
+		background-position: center;
+		background-size: cover;
+	}
+
+}
+
+@media screen and (max-width: 767px){
+	
+	.swiper-slide {
+		background-position: center;
+		background-size: cover;
+	}
+}
