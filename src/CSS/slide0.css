@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 html,
 body {
   position: relative;
@@ -191,4 +192,114 @@ section {
 	box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15); 
 	transform: translateX(-50%) translateY(-50%); 
  }
+>>>>>>> Stashed changes
+=======
+* {
+	font-family: 'Libre Baskerville', serif;
+	box-sizing: border-box;
+	margin: 0;
+
+}
+body,
+
+/*
+body,
+html {
+	position: relative;
+	height: 100vh;
+} */
+body {
+	background: #eee;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	/* color: #fff; */
+	margin: 0;
+	padding: 0;
+}
+.swiper {
+	width: 100%;
+	height: 100vh;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 100vh;
+}
+.swiper-slide img {
+	display: block;
+	width: 100vh;
+	height: 100%;
+	object-fit: cover;
+}
+.swiper {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+span {
+	font-weight: 700;
+	font-size: 30px;
+	display: block;
+	background-color: rgba(255, 255, 255, 0.75);
+	border: 7px;
+	border-color: white;
+}
+
+p:after {
+	display: block;
+	content: '';
+	border-bottom: solid 3px #000;
+	transform: scaleX(0);
+	transition: transform 250ms ease-in-out;
+}
+/* p:hover:after {
+	transform: scaleX(1);
+} */
+
+/* span:hover {
+	transform: scale(1.4);
+} */
+
+.main-section {
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.container {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+section {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	scroll-snap-align: start;
+	overflow: scroll;
+}
+
+.weather-icon-span {
+	display: inline;
+	border: 0;
+}
 >>>>>>> Stashed changes
