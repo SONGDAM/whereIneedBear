@@ -70,8 +70,46 @@
 	display: inline-block; */
  }
 
+/*============== side-bar ============== */
+
+.sideBar {
+	margin: 20px 30px;
+}
+/* 
+.sideBar-ico input[type=checkbox] {
+	display: none;
+} */
+
+.sideBar > ul  {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.menuItem {
+	display: none;
+}
+
+.sideBar-ico > span:last-child {
+	display: none;
+}
+
+/* .sideBar-ico input[type=checkbox]:checked ~ .menuItem {
+	display: block;
+} */
+
+input#sideBarItem:checked ~.menuItem{
+	display: block;
+}
+
+
+/* .sideBar-ico > span:first-child:click~ .menuItem{
+	display: block;
+} */
+
 
  @media screen and  (min-width:768px) and (max-width: 1023px) {
+
 	#imgBox{
 		flex-direction: column;
 		justify-content: center;

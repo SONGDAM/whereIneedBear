@@ -11,8 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" /> -->
+    <script src="https://kit.fontawesome.com/0decf16c11.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d12c9ea662.js" crossorigin="anonymous"></script>
     <script defer src="./JS/weather.js"></script>
+    <script defer src="./JS/main.js"></script>
     <script defer src="./JS/my-img.js"></script>
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>whereineedbear</title>
@@ -66,6 +69,26 @@
                     요 위에 section태그에 디스플레이 값이나 포지션값은 클래스값은 변경이나 선언X
                     클래스명 container로 사용 X -->
          <div class="container2">
+           <div class="sideBar">
+             <div class="sideBar-ico">
+                 <input type="checkbox" id="sideBarItem">
+                 <label for="sideBarItem">
+                    <span><i class="fa-solid fa-bars fa-l"></i></span>
+                    <!-- <span><i class="fa-solid fa-x fa-l"></i></span> -->
+                </label>
+            </div>
+             <ul class="menuItem">
+               <li>
+                 <a href="#">Home</a>
+               </li>
+               <li>
+                <a href="#">Login</a>
+               </li>
+              <li>
+               <a href="#">Wish List</a>
+              </li>
+             </ul>
+           </div>
             <div id="contain">
                <div class="select">
                   <select name="" id="tempSelect" onchange="selects(this)">
