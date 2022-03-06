@@ -70,9 +70,9 @@ p:after {
 	transform: scaleX(0);
 	transition: transform 250ms ease-in-out;
 }
-p:hover:after {
+/* p:hover:after {
 	transform: scaleX(1);
-}
+} */
 
 /* span:hover {
 	transform: scale(1.4);
