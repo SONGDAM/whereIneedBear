@@ -1,141 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./CSS/slide0.css" />
-    <link rel="stylesheet" href="./CSS/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./CSS/my-img.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" /> -->
-    <script src="https://kit.fontawesome.com/0decf16c11.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/d12c9ea662.js" crossorigin="anonymous"></script>
-    <script defer src="./JS/weather.js"></script>
-    <script defer src="./JS/main.js"></script>
-    <script defer src="./JS/my-img.js"></script>
-    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <title>whereineedbear</title>
-    <style media="screen">
-      /* .swiper-slide:hover {opacity: 0.7} */
-      .swiper-slide {
-        opacity: 0.7;
-      }
 
-      .swiper-slide:hover {
-        opacity: 1;
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./CSS/slide0.css" />
+  <link rel="stylesheet" href="./CSS/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./CSS/my-img.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d12c9ea662.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/0decf16c11.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/d12c9ea662.js" crossorigin="anonymous"></script>
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" /> -->
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script defer src="./JS/main.js"></script>
+  <script defer src="./JS/my-img.js"></script>
+  <script defer src="./JS/weather.js"></script>
+  <title>whereineedbear</title>
+  <style media="screen">
+    /* .swiper-slide:hover {opacity: 0.7} */
+    .swiper-slide {
+      opacity: 0.7;
+    }
 
-  <body>
-    <!-- Swiper -->
+    .swiper-slide:hover {
+      opacity: 1;
+    }
+  </style>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
 
-    <div class="container">
-      <section>
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url(./assets/fw1.jpg); background-size: cover">
-              <span style="padding: 20px">
-                <p>Whereineedbear</p>
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 25%;
+    }
+  </style>
 
-                <div class="main-section">
-                  <div class="product">
-                    <div id="container">
-                      <div class="dayTemp">
-                        <h1>Loading..</h1>
-                      </div>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <p style="text-align: center;"><span style="font-size: 14pt;"><b><span
+              style="font-size: 24pt;">🔔NOTICE🔔</span></b></span></p>
+      <p style="text-align: center; line-height: 1.5; font-family: 'Noto Sans KR', sans-serif;"><br />안녕하세요</p>
+      <i><b><p style="text-align: center; line-height: 1.5; font-family: 'Noto Sans KR', sans-serif; color: burlywood;">whereineedbear</i></b></p>
+      <p style="text-align: center; line-height: 1.5; font-family: 'Noto Sans KR', sans-serif;">(웨아니버)는</p>
+      <p style="text-align: center; line-height: 1.5; font-family: 'Noto Sans KR', sans-serif;">기온별 옷차림을</p>
+      <p style="text-align: center; line-height: 1.5; font-family: 'Noto Sans KR', sans-serif;">추천해주는 사이트입니다</p>
+      <p style="text-align: center; line-height: 1.5; font-family: 'Noto Sans KR', sans-serif;">많은 이용 부탁드립니다</p>
+      <p><br /></p>
+      <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 10px;padding-top: 10px;"
+        onClick="close_pop();">
+        <span class="pop_bt" style="font-size: 13pt;">
+          CLOSE
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    jQuery(document).ready(function () {
+      $('#myModal').show();
+    });
+    //팝업 Close 기능
+    function close_pop(flag) {
+      $('#myModal').hide();
+    };
+
+  </script>
+
+  <div class="container">
+    <section>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url(./assets/fw1.jpg); background-size: cover">
+            <span style="padding: 20px">
+              <p>Whereineedbear</p>
+
+              <div class="main-section">
+                <div class="product">
+                  <div id="container">
+                    <div class="dayTemp">
+                      <h1>Loading..</h1>
                     </div>
                   </div>
                 </div>
-              </span>
-            </div>
-            <div class="swiper-slide" style="background-image: url(./assets/fw2.jpg)"></div>
-            <div class="swiper-slide" style="background-image: url(./assets/fw3.jpg)"></div>
-            <div class="swiper-slide" style="background-image: url(./assets/fw4.jpg)"></div>
-            <div class="swiper-slide" style="background-image: url(./assets/fw5.jpg); background-size: cover"></div>
+              </div>
+            </span>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-slide" style="background-image: url(./assets/fw2.jpg)"></div>
+          <div class="swiper-slide" style="background-image: url(./assets/fw3.jpg)"></div>
+          <div class="swiper-slide" style="background-image: url(./assets/fw4.jpg)"></div>
+          <div class="swiper-slide" style="background-image: url(./assets/fw5.jpg); background-size: cover"></div>
         </div>
-      </section>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
 
-      <section>
-        <!-- 여기에 코드 작성해주세요~
+    <section>
+      <!-- 여기에 코드 작성해주세요~
                     요 위에 section태그에 디스플레이 값이나 포지션값은 클래스값은 변경이나 선언X
                     클래스명 container로 사용 X -->
-         <div class="container2">
-           <div class="sideBar">
-             <div class="sideBar-ico">
-                 <input type="checkbox" id="sideBarItem">
-                 <label for="sideBarItem">
-                    <span><i class="fa-solid fa-bars fa-l"></i></span>
-                    <!-- <span><i class="fa-solid fa-x fa-l"></i></span> -->
-                </label>
-            </div>
-             <ul class="menuItem">
-               <li>
-                 <a href="#">Home</a>
-               </li>
-               <li>
-                <a href="#">Login</a>
-               </li>
-              <li>
-               <a href="#">Wish List</a>
-              </li>
-             </ul>
-           </div>
-            <div id="contain">
-               <div class="select">
-                  <select name="" id="tempSelect" onchange="selects(this)">
-                     <!-- <option value="" id="nowTemp"></option> -->
-                     <option value="23">23-27°</option>
-                     <option value="20">20-22°</option>
-                     <option value="17">17-19°</option>
-                     <option value="12">12-16°</option>
-                     <option value="9">9-11°</option>
-                     <option value="5">5-8°</option>
-                     <option value="4">4°↓</option>
-                  </select>
-               </div>
-               <div class="btnBox">
-                  <div class="btnItem">
-                     <button class="btn1" value="casual" onclick="btnLook(this)">Casual</button>
-                     <button class="btn1" value="modern" onclick="btnLook(this)">Modern</button>
-                     <button class="btn1" value="romantic" onclick="btnLook(this)">Romantic</button>
-                     <button class="btn1" value="street" onclick="btnLook(this)">Street</button>
-                     <button class="btn1" value="amekaji" onclick="btnLook(this)">Amekaji</button>
-                  </div>
-               </div>
-            </div>
-          <div id="imgBox">
-            <div id="imgItem"></div>
+      <div class="container2">
+        <div class="sideBar">
+          <input type="checkbox" id="sideBarItem">
+          <label for="sideBarItem" class="sideBar-ico">
+            <span><i class="fa-solid fa-bars fa-l"></i></span>
+            <span><i class="fa-solid fa-x fa-l"></i></span>
+          </label>
+          <div class="menuItem">
+            <span><a href="#">Home</a></span>
+                <span><a href="#">Login</a></span>
+                <span><a href="#">Wish List</a></span>
           </div>
         </div>
-      </section>
-    </div>
+        <div id="contain">
+          <div class="select">
+            <select name="" id="tempSelect" onchange="selects(this)">
+              <!-- <option value="" id="nowTemp"></option> -->
+              <option value="23">23-27°</option>
+              <option value="20">20-22°</option>
+              <option value="17">17-19°</option>
+              <option value="12">12-16°</option>
+              <option value="9">9-11°</option>
+              <option value="5">5-8°</option>
+              <option value="4">4°↓</option>
+            </select>
+          </div>
+          <div class="btnBox">
+            <div class="btnItem">
+              <button class="btn1" value="casual" onclick="btnLook(this)">Casual</button>
+              <button class="btn1" value="modern" onclick="btnLook(this)">Modern</button>
+              <button class="btn1" value="romantic" onclick="btnLook(this)">Romantic</button>
+              <button class="btn1" value="street" onclick="btnLook(this)">Street</button>
+              <button class="btn1" value="amekaji" onclick="btnLook(this)">Amekaji</button>
+            </div>
+          </div>
+        </div>
+        <div id="imgBox">
+          <div id="imgItem"></div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper('.mySwiper', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
-  </body>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+
 </html>
