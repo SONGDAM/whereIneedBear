@@ -73,8 +73,6 @@ body, html{
 	display: inline-block; */
  }
 
-<<<<<<< Updated upstream
-=======
 /*============== side-bar ============== */
 
  
@@ -100,7 +98,7 @@ body, html{
 	z-index: 0; 
 	left: -3000px; 
 	/* transition: all .35s;  */
-	/* margin-top: 100px; */
+	margin-top: 100px;
 }
 
 .menuItem  a {
@@ -179,7 +177,6 @@ body, html{
 	z-index: 30;
 } */
 
->>>>>>> Stashed changes
 
 
 
