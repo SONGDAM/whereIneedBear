@@ -1,0 +1,73 @@
+doctype html(lang='en')
+head
+    meta(charset='UTF-8')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+    title admin
+    |     
+    link(href='https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap', rel='stylesheet')
+    |     
+    link(rel='stylesheet', href='./CSS/admin.css')
+    |     
+    script(defer='', src='./JS/admin.js')
+|   
+body
+    header
+    .title Admin
+    |     
+    article.admin-form
+        form.admin(action='/up', method='POST' enctype="multipart/form-data")
+            div.form-fill
+                label.letter name           
+                input.input(type='text')
+                |         
+                div.form-fill
+                label.letter input          
+                input(type='file', accept='image/gif, image/jpeg, image/png' name='img')
+                br
+            |         
+            div.form-fill
+                label.letter temp
+                |           
+                select.select(id='')
+                    option(value='') -5
+                    |             
+                    option(value='') -4
+                    |             
+                    option(value='') -3
+                    |             
+                    option(value='') -2
+                    |             
+                    option(value='') -1
+                    |             
+                    option(value='') 1
+                    |             
+                    option(value='') 2
+                    |             
+                    option(value='') 3
+                    |             
+                    option(value='') 4
+            |         
+            div.form-fill
+                label.letter looks
+                |           
+                select.select(id='')
+                    option(value='') Casual
+                    |             
+                    option(value='') Modern
+                    |             
+                    option(value='') Romantic
+                    |             
+                    option(value='') Street
+                    |             
+                    option(value='') Amekaji
+                |         
+            div.btn-group
+                button(type='submit') accept
+                |           
+                button(type='button') cancel
+            |         
+            div
