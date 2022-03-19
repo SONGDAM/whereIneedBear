@@ -50,11 +50,11 @@ body {
   margin-right: auto;
 }
 
-span {
+.main {
   font-weight: 700;
   font-size: 30px;
   display: block;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: #fff;
   border: 7px;
   border-color: white;
 }
